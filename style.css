@@ -10,6 +10,7 @@
   --ink: #1c1025;
   --muted: #675c68;
   --line: rgba(36, 16, 47, 0.14);
+  --section-gutter: clamp(34px, 5vw, 68px);
 }
 
 * {
@@ -70,7 +71,7 @@ main {
 
 section {
   position: relative;
-  padding: clamp(34px, 5vw, 68px);
+  padding: var(--section-gutter);
   margin: 0;
   border: 0;
   border-radius: 0;
@@ -284,8 +285,9 @@ main img.reveal-on-scroll.is-visible {
 }
 
 #Protocolo h3 {
-  margin: 0;
-  padding: 44px clamp(28px, 5vw, 68px) 20px;
+  max-width: none;
+  margin: 0 calc(-1 * var(--section-gutter));
+  padding: 44px var(--section-gutter) 20px;
   background: var(--plum);
   color: var(--cream-light);
   font-size: clamp(2rem, 4vw, 3.5rem);
@@ -293,9 +295,11 @@ main img.reveal-on-scroll.is-visible {
 }
 
 #Protocolo h3 ~ p,
-#Protocolo h3 ~ ul {
+#Protocolo h3 ~ ul,
+#Protocolo h3 ~ figure {
   max-width: none;
-  padding-inline: clamp(28px, 5vw, 68px);
+  margin-inline: calc(-1 * var(--section-gutter));
+  padding-inline: var(--section-gutter);
   background: var(--plum);
   color: rgba(250, 243, 233, 0.78);
 }
@@ -303,20 +307,39 @@ main img.reveal-on-scroll.is-visible {
 #Protocolo h3 ~ p {
   padding-top: 10px;
   margin: 0;
+  margin-inline: calc(-1 * var(--section-gutter));
   text-align: center;
 }
 
 #Protocolo h3 ~ ul {
+  margin-top: 0;
   padding-top: 16px;
   padding-bottom: 26px;
-  margin: 0;
+  margin-bottom: 0;
   list-style: none;
 }
 
 #Protocolo h3 ~ ul li {
-  max-width: 700px;
+  max-width: 900px;
+  margin-inline: auto;
   padding: 10px 0;
+  text-align: justify;
   border-bottom: 1px solid rgba(250, 243, 233, 0.16);
+}
+
+#Protocolo h3 ~ figure {
+  margin-top: 0;
+}
+
+#Protocolo h3 ~ figure table {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+#Protocolo h3 ~ figure figcaption {
+  max-width: 1000px;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .lectura-estres {
@@ -618,16 +641,17 @@ footer img {
   }
 
   section {
-    padding: 36px 24px;
+    --section-gutter: 24px;
+    padding: 36px var(--section-gutter);
   }
 
   #Protocolo h3 {
-    padding: 36px 24px 16px;
+    padding: 36px var(--section-gutter) 16px;
   }
 
   #Protocolo h3 ~ p,
   #Protocolo h3 ~ ul {
-    padding-inline: 24px;
+    padding-inline: var(--section-gutter);
   }
 
   .lectura-estres {
