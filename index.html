@@ -336,6 +336,25 @@
                 otroMotivo.value = "";
             }
         });
+
+        const imagenes = document.querySelectorAll("main img");
+        const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        if ("IntersectionObserver" in window && !reducirMovimiento.matches) {
+            const observadorImagenes = new IntersectionObserver((entradas, observador) => {
+                entradas.forEach((entrada) => {
+                    if (entrada.isIntersecting) {
+                        entrada.target.classList.add("is-visible");
+                        observador.unobserve(entrada.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            imagenes.forEach((imagen) => {
+                imagen.classList.add("reveal-on-scroll");
+                observadorImagenes.observe(imagen);
+            });
+        }
     </script>
 </body>
 </html>

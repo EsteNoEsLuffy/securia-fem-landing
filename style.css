@@ -26,8 +26,8 @@ body {
   background: var(--cream);
   color: var(--ink);
   font-family: "Hanken Grotesk", "Segoe UI", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: 17px;
+  line-height: 1.65;
   padding: 0;
 }
 
@@ -82,8 +82,7 @@ section > p,
 section > ol,
 section > ul,
 section > table,
-section > form,
-section > img {
+section > form {
   margin-inline: auto;
 }
 
@@ -103,16 +102,18 @@ h2 {
 }
 
 h3 {
-  margin: 38px 0 16px;
+  max-width: 900px;
+  margin: 38px auto 16px;
   font-size: clamp(1.55rem, 3vw, 2.8rem);
+  text-align: center;
 }
 
 p {
   max-width: 760px;
   margin-bottom: 18px;
   color: inherit;
-  font-size: 1rem;
-  text-align: center;
+  font-size: 1.125rem;
+  text-align: justify;
 }
 
 strong {
@@ -161,8 +162,8 @@ li {
   justify-self: center;
   max-width: 560px;
   color: rgba(250, 243, 233, 0.78);
-  font-size: 0.96rem;
-  text-align: center;
+  font-size: 1.125rem;
+  text-align: justify;
 }
 
 #Inicio nav {
@@ -180,8 +181,6 @@ li {
   grid-row: 1 / span 3;
   width: 100%;
   height: auto;
-  max-height: none;
-  object-fit: contain;
   margin: 0;
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 0;
@@ -227,7 +226,7 @@ li {
 
 #Protocolo > p,
 #Protocolo > ol {
-  font-size: 0.96rem;
+  font-size: 1.1rem;
 }
 
 #Protocolo > ol {
@@ -267,12 +266,21 @@ li {
   width: 100%;
   max-width: 1100px;
   height: auto;
-  max-height: none;
-  object-fit: contain;
-  margin: 28px 0;
+  margin: 28px auto;
   border: 1px solid rgba(36, 16, 47, 0.12);
   border-radius: 0;
   box-shadow: none;
+}
+
+main img.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+main img.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #Protocolo h3 {
@@ -325,6 +333,7 @@ li {
   max-width: none;
   color: rgba(250, 243, 233, 0.72);
   font-size: 0.88rem;
+  text-align: left;
 }
 
 .lectura-estres p strong {
@@ -342,7 +351,7 @@ table {
   margin: 18px 0;
   border-collapse: collapse;
   background: rgba(255, 255, 255, 0.04);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 th,
@@ -421,9 +430,6 @@ figcaption {
 #Modelo table {
   max-width: 1050px;
   margin-inline: auto;
-}
-
-#Modelo table {
   margin-top: 30px;
   background: rgba(250, 243, 233, 0.04);
 }
@@ -608,7 +614,6 @@ footer img {
   #Inicio video {
     width: 100%;
     height: auto;
-    max-height: none;
     margin-top: 18px;
   }
 
@@ -653,9 +658,14 @@ footer img {
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
+  main img.reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .link,
+  button[type="submit"] {
+    transition: none;
   }
 }
