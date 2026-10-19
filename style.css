@@ -35,7 +35,6 @@ header,
 main,
 footer {
   width: 100%;
-  margin-inline: auto;
 }
 
 header {
@@ -45,7 +44,7 @@ header {
   align-items: center;
   justify-content: space-between;
   min-height: 64px;
-  padding: 14px 34px;
+  padding: 14px max(24px, calc((100% - 1180px) / 2));
   background: var(--plum);
   color: var(--cream-light);
 }
@@ -78,6 +77,16 @@ section {
   box-shadow: none;
 }
 
+section > h2,
+section > p,
+section > ol,
+section > ul,
+section > table,
+section > form,
+section > img {
+  margin-inline: auto;
+}
+
 h2,
 h3 {
   font-family: "Archivo", "Arial Narrow", sans-serif;
@@ -87,9 +96,10 @@ h3 {
 }
 
 h2 {
-  max-width: 760px;
+  max-width: 860px;
   margin-bottom: 22px;
   font-size: clamp(2rem, 4.5vw, 4.2rem);
+  text-align: center;
 }
 
 h3 {
@@ -98,10 +108,11 @@ h3 {
 }
 
 p {
-  max-width: 680px;
+  max-width: 760px;
   margin-bottom: 18px;
   color: inherit;
   font-size: 1rem;
+  text-align: center;
 }
 
 strong {
@@ -123,6 +134,7 @@ li {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   align-items: center;
+  justify-content: center;
   gap: 14px 42px;
   min-height: 500px;
   color: var(--cream-light);
@@ -137,22 +149,28 @@ li {
 
 #Inicio h2 {
   grid-column: 1;
+  justify-self: center;
   max-width: 620px;
   margin: 0;
   font-size: clamp(2.8rem, 6vw, 5.7rem);
+  text-align: center;
 }
 
 #Inicio p {
   grid-column: 1;
+  justify-self: center;
   max-width: 560px;
   color: rgba(250, 243, 233, 0.78);
   font-size: 0.96rem;
+  text-align: center;
 }
 
 #Inicio nav {
   grid-column: 1;
+  justify-self: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin: 4px 0 12px;
 }
@@ -213,7 +231,7 @@ li {
 }
 
 #Protocolo > ol {
-  max-width: 760px;
+  max-width: 900px;
   padding: 0;
   list-style: none;
   counter-reset: steps;
@@ -245,7 +263,9 @@ li {
 
 #Protocolo > img,
 #Implementacion > img {
+  display: block;
   width: 100%;
+  max-width: 1100px;
   height: auto;
   max-height: none;
   object-fit: contain;
@@ -261,6 +281,7 @@ li {
   background: var(--plum);
   color: var(--cream-light);
   font-size: clamp(2rem, 4vw, 3.5rem);
+  text-align: center;
 }
 
 #Protocolo h3 ~ p,
@@ -274,6 +295,7 @@ li {
 #Protocolo h3 ~ p {
   padding-top: 10px;
   margin: 0;
+  text-align: center;
 }
 
 #Protocolo h3 ~ ul {
@@ -358,7 +380,8 @@ figcaption {
 }
 
 #Tecnologia ul {
-  max-width: 760px;
+  max-width: 900px;
+  margin-inline: auto;
   list-style: none;
   padding: 0;
 }
@@ -377,7 +400,7 @@ figcaption {
 }
 
 #Implementacion p {
-  max-width: 760px;
+  max-width: 900px;
 }
 
 #Modelo {
@@ -393,6 +416,11 @@ figcaption {
 #Modelo p,
 #Modelo small {
   color: rgba(250, 243, 233, 0.74);
+}
+
+#Modelo table {
+  max-width: 1050px;
+  margin-inline: auto;
 }
 
 #Modelo table {
@@ -430,8 +458,9 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 18px;
+  width: 100%;
   max-width: 760px;
-  margin-top: 30px;
+  margin: 30px auto 0;
   padding: 24px;
   border: 1px solid rgba(36, 16, 47, 0.18);
   background: rgba(250, 243, 233, 0.28);
@@ -543,6 +572,7 @@ footer img {
 
   #Inicio {
     grid-template-columns: 1fr;
+    justify-items: center;
     gap: 14px;
     min-height: auto;
     padding: 42px 24px 28px;
@@ -565,6 +595,10 @@ footer img {
 
   #Inicio h2 {
     font-size: clamp(2.8rem, 13vw, 4.5rem);
+  }
+
+  #Inicio p {
+    max-width: 560px;
   }
 
   #Inicio nav {
