@@ -16,6 +16,7 @@
 
     <title>SecurIA Fem | Seguridad y tecnología</title>
 
+    <link rel="stylesheet" href="style.css">
     <!-- Archivos externos -->
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="Imagenes/app_icon.png">
@@ -30,7 +31,7 @@
 
     <main>
 
-        <!-- 1. Presentación del proyecto -->
+        <!--Presentación del proyecto-->
         <section id="Inicio">
             <h2>Seguridad inmediata, confianza y tecnología</h2>
 
@@ -44,6 +45,7 @@
 
             <nav>
                 <a class="link" href="#Protocolo">Conoce cómo funciona</a>
+                <a class="link" href="#SolDemo">Contactanos</a>
             </nav>
 
             
@@ -55,7 +57,7 @@
              </video>
         </section>
 
-        <!-- 2. Funcionamiento y protocolo -->
+        <!--Funcionamiento y protocolo-->
         <section id="Protocolo">
             <h2>¿Cómo funciona?</h2>
 
@@ -152,7 +154,7 @@
             </figure>
         </section>
 
-        <!-- 3. Tecnología y seguridad -->
+        <!--Tecnología y seguridad-->
         <section id="Tecnologia">
             <h2>Tecnología y protección de la información</h2>
 
@@ -177,7 +179,7 @@
             </p>
         </section>
 
-        <!-- 4. Implementación institucional -->
+               <!--Implementación institucional-->
         <section id="Implementacion">
             <h2>Implementación y monitoreo</h2>
 
@@ -193,50 +195,114 @@
                 de acceso ayudan a limitar la consulta de información
                 sensible según las funciones de cada usuario.
             </p>
+
+            <p>
+                Contamos con una alianza estratégica con FICOSEC Delicias
+                para la prevención de la violencia intrafamiliar.
+            </p>
+
+            <!--imagen-->
+               <img
+            src="/Imagenes/FICOSEC.png"
+            alt="Dashboard de la plataforma web"
+            title="Foto estudiante"
+            height="300" width="600">
+            <p>
+                SecurIA Fem no conserva las evidencias de los incidentes:
+                es la institución quien las resguarda y monitorea.
+            </p>
         </section>
 
-        <!-- 5. Modelo de negocio -->
+               <!--A quién va dirigido (B2B)-->
         <section id="Modelo">
-            <h2>Modelo de negocio</h2>
+            <h2>Para fiscalías, gobiernos estatales y municipios</h2>
 
             <p>
-                SecurIA Fem plantea un modelo dirigido a empresas de
-                seguridad mediante la venta del dispositivo wearable
-                y una suscripción mensual por usuario activo para el
-                acceso a la plataforma y sus servicios.
+                La institución adquiere los dispositivos y la suscripción
+                de monitoreo para las mujeres que atiende. El centro de
+                monitoreo puede operarlo su propio personal.
             </p>
 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Concepto</th>
+                        <th>Incluye</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dispositivo wearable</strong></td>
+                        <td>Botón de pánico, cámara, micrófono y memoria con evidencia protegida.</td>
+                        <td><strong>$1,300</strong> MXN por unidad</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monitoreo</strong></td>
+                        <td>App, centro de monitoreo, resguardo cifrado de evidencia e IA de voz.</td>
+                        <td><strong>$130</strong> MXN al mes por usuaria</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <p>
-                Este esquema busca ofrecer una solución que pueda
-                adaptarse al número de usuarios y a las necesidades
-                de monitoreo de cada organización.
+                <small>
+                    Precios de referencia del modelo de negocio 2026, antes
+                    de IVA y sujetos a convenio. Piloto disponible en 2026.
+                </small>
             </p>
         </section>
-
-        <!-- 6. Contacto y demostración -->
+        
+        <!--Contacto y demostración-->
         <section id="SolDemo">
             <h2>Conoce SecurIA Fem</h2>
 
             <p>
-                Descubre cómo la integración de dispositivos, aplicaciones
-                e inteligencia artificial puede apoyar la atención y el
-                seguimiento de incidentes.
-            </p>
-
-            <p>
                 ¿Representas a una organización de seguridad y te interesa
-                conocer la propuesta?
+                conocer la propuesta? Contáctanos 
+            </p>
+            <p> Descubre cómo la integración de dispositivos, aplicaciones
+                e inteligencia artificial puede apoyar la atención y el
+                seguimiento de incidentes.</p>
+
+           
+            <p>
+                <strong>¿Está en peligro ahora?</strong> Llame al
+                <strong>911</strong>. SecurIA Fem está en etapa piloto y
+                no sustituye a los servicios de emergencia.
             </p>
 
-            <a class="link" href="mailto:contacto@tu-dominio-real.com">
-                Solicitar demostración
-            </a>
-        </section>
+            <form action="mailto:contacto@tu-dominio-real.com" method="post" enctype="text/plain">
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre"
+                       required pattern=".*\S.*" title="Escribe tu nombre">
+
+                <label for="institucion">Institución</label>
+                <input type="text" id="institucion" name="institucion"
+                       required pattern=".*\S.*" title="Escribe el nombre de tu institución">
+
+                <label for="correo">Correo de trabajo</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="motivo">Motivo</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="piloto">Un piloto institucional</option>
+                    <option value="demostracion">Una demostración del sistema</option>
+                </select>
+
+                <label for="mensaje">Mensaje (opcional)</label>
+                <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+
+                <button type="submit">Enviar solicitud</button>
+
+            </form>
 
     </main>
 
     <footer>
-        <p>SecurIA Fem | Protegemos lo que importa.</p>
+        <p><img src="Imagenes/logo sin letras.png" width="20" height="20">SecurIA Fem | Protegemos lo que importa.</p>
     </footer>
 </body>
 </html>
