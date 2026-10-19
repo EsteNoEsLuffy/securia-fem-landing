@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#EACFFC">
+
+    <!-- Información para compartir la página en redes sociales -->
+    <meta property="og:title" content="SecurIA Fem | Protegemos lo que importa">
+    <meta property="og:description" content="Tecnología para la atención de incidentes y la protección de las personas.">
+    <meta property="og:image" content="Imagenes/app_icon.png">
+    <meta property="og:url" content="https://tu-dominio-real.com">
+
+    <!--ME FALTA CAMBIAR LAS URL-->
+
+    <title>SecurIA Fem | Seguridad y tecnología</title>
+
+    <!-- Archivos externos -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="Imagenes/app_icon.png">
+    <link rel="canonical" href="https://tu-dominio-real.com">
+</head>
+
+<body>
+    <header>
+        <h1>SecurIA Fem</h1>
+        <p>Tecnología para proteger lo que importa.</p>
+    </header>
+
+    <main>
+
+        <!-- 1. Presentación del proyecto -->
+        <section id="Inicio">
+            <h2>Seguridad inmediata, confianza y tecnología</h2>
+
+            <p>
+                SecurIA Fem es una solución de seguridad que integra un
+                wearable con botón de pánico, una aplicación móvil y una
+                plataforma web de monitoreo. Su objetivo es facilitar la
+                atención de incidentes y el resguardo de información
+                relacionada con ellos.
+            </p>
+
+            <nav>
+                <a class="link" href="#Protocolo">Conoce cómo funciona</a>
+            </nav>
+
+            
+             <video
+                src="Videos/SecurIA_fem.mp4"
+                controls autoplay muted loop
+                poster="Imagenes/app_icon.png"
+                width="600" height="300">
+             </video>
+        </section>
+
+        <!-- 2. Funcionamiento y protocolo -->
+        <section id="Protocolo">
+            <h2>¿Cómo funciona?</h2>
+
+            <p>
+                Al presionar el botón de pánico durante tres segundos,
+                se activa el protocolo de alerta. El sistema permite
+                iniciar la captura de audio y video desde la aplicación,
+                así como notificar el incidente para facilitar su atención.
+            </p>
+
+            <ol>
+                <li><strong>Activación:</strong> la persona solicita ayuda mediante el botón de pánico.</li>
+                <li><strong>Registro:</strong> se recopila información del incidente conforme a las funciones implementadas.</li>
+                <li><strong>Análisis de voz:</strong> una red neuronal reconoce emociones en el audio de la alerta y estima un nivel de estrés para orientar a la operadora.</li>
+                <li><strong>Monitoreo:</strong> el personal autorizado puede consultar la información disponible.</li>
+                <li><strong>Seguimiento:</strong> el incidente puede documentarse para facilitar su revisión.</li>
+            </ol>
+
+            <img
+            src="/Imagenes/Monitoreo.png"
+            alt="Dashboard de la plataforma web"
+            title="Foto estudiante"
+            height="300" width="600">
+
+            <p>
+                El objetivo es reducir el tiempo entre la solicitud de ayuda
+                y la atención del incidente.
+            </p>
+
+            <h3>Análisis de voz para orientar a la operadora</h3>
+
+            <p>
+                Una red neuronal entrenada con habla en español de México
+                reconoce seis emociones en el audio de cada alerta y estima
+                un nivel de estrés para orientar a la operadora.
+            </p>
+
+            <ul>
+                <li><strong>Corre en nuestros servidores.</strong> Ninguna grabación se envía a empresas externas.</li>
+                <li><strong>Escucha cómo se dice, no qué se dice:</strong> tono, intensidad, ritmo y temblor de la voz.</li>
+                <li><strong>Es apoyo, no diagnóstico.</strong> Toda alerta se atiende, con o sin nivel de estrés.</li>
+            </ul>
+
+            <figure class="lectura-estres">
+                <p>Nivel de estrés estimado · micrófono del celular</p>
+                <p><strong>35 %</strong></p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Emoción</th>
+                            <th>Nivel</th>
+                            <th>Prob.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Enojo</td>
+                            <td><meter min="0" max="100" value="33">33 %</meter></td>
+                            <td>33 %</td>
+                        </tr>
+                        <tr>
+                            <td>Neutral</td>
+                            <td><meter min="0" max="100" value="21">21 %</meter></td>
+                            <td>21 %</td>
+                        </tr>
+                        <tr>
+                            <td>Alegría</td>
+                            <td><meter min="0" max="100" value="19">19 %</meter></td>
+                            <td>19 %</td>
+                        </tr>
+                        <tr>
+                            <td>Asco</td>
+                            <td><meter min="0" max="100" value="10">10 %</meter></td>
+                            <td>10 %</td>
+                        </tr>
+                        <tr>
+                            <td>Miedo</td>
+                            <td><meter min="0" max="100" value="9">9 %</meter></td>
+                            <td>9 %</td>
+                        </tr>
+                        <tr>
+                            <td>Tristeza</td>
+                            <td><meter min="0" max="100" value="8">8 %</meter></td>
+                            <td>8 %</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <figcaption>
+                    Lectura de una prueba con voz alterada · wav2vec 2.0
+                    ajustado con MESD · audio a 16 kHz
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- 3. Tecnología y seguridad -->
+        <section id="Tecnologia">
+            <h2>Tecnología y protección de la información</h2>
+
+            <p>
+                SecurIA Fem integra herramientas de desarrollo móvil,
+                servicios de backend y componentes de inteligencia
+                artificial para apoyar el registro y seguimiento de incidentes.
+            </p>
+
+            <ul>
+                <li><strong>Aplicación móvil:</strong> Flutter y Dart.</li>
+                <li><strong>Servicios backend:</strong> C# con .NET 8 y API REST.</li>
+                <li><strong>Inteligencia artificial:</strong> Python para el análisis de características de voz relacionadas con el estrés.</li>
+                <li><strong>Acceso:</strong> autenticación mediante JWT y control de usuarios autorizados.</li>
+            </ul>
+
+            <p>
+                La plataforma busca mantener la información de los incidentes
+                bajo acceso controlado y facilitar la consulta de registros.
+                El análisis de voz funciona como apoyo y no constituye,
+                por sí solo, una prueba definitiva de violencia o peligro.
+            </p>
+        </section>
+
+        <!-- 4. Implementación institucional -->
+        <section id="Implementacion">
+            <h2>Implementación y monitoreo</h2>
+
+            <p>
+                La solución está orientada a organizaciones de seguridad
+                que necesitan administrar usuarios y dar seguimiento a
+                incidentes desde una plataforma centralizada.
+            </p>
+
+            <p>
+                El personal autorizado puede consultar la información
+                disponible y dar seguimiento a los casos. Los permisos
+                de acceso ayudan a limitar la consulta de información
+                sensible según las funciones de cada usuario.
+            </p>
+        </section>
+
+        <!-- 5. Modelo de negocio -->
+        <section id="Modelo">
+            <h2>Modelo de negocio</h2>
+
+            <p>
+                SecurIA Fem plantea un modelo dirigido a empresas de
+                seguridad mediante la venta del dispositivo wearable
+                y una suscripción mensual por usuario activo para el
+                acceso a la plataforma y sus servicios.
+            </p>
+
+            <p>
+                Este esquema busca ofrecer una solución que pueda
+                adaptarse al número de usuarios y a las necesidades
+                de monitoreo de cada organización.
+            </p>
+        </section>
+
+        <!-- 6. Contacto y demostración -->
+        <section id="SolDemo">
+            <h2>Conoce SecurIA Fem</h2>
+
+            <p>
+                Descubre cómo la integración de dispositivos, aplicaciones
+                e inteligencia artificial puede apoyar la atención y el
+                seguimiento de incidentes.
+            </p>
+
+            <p>
+                ¿Representas a una organización de seguridad y te interesa
+                conocer la propuesta?
+            </p>
+
+            <a class="link" href="mailto:contacto@tu-dominio-real.com">
+                Solicitar demostración
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>SecurIA Fem | Protegemos lo que importa.</p>
+    </footer>
+</body>
+</html>
